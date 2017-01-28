@@ -13,10 +13,11 @@ class Jump : PowerUp
   {
     Vector3 m = new Vector3(0, 0);
     
-    if (thing.InputUp && thing.CC.isGrounded)
-      m.y += WalkSpeed;
+    if (thing.InputUp && thing.OnGround())
+    { 
+      thing.Velocity.y += thing.MaxVelocity * 2.0f;
+    }
 
-    thing.Velocity += m;
   }
 
 }

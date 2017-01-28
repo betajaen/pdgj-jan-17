@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Walk : PowerUp
 {
-
-  public float WalkSpeed = 10.0f;
+  
+  public float Acceleration = 0.0f;
 
   void Update()
   {
     Vector3 m = new Vector3(0, 0);
     
     if (thing.InputLeft)
-      m.x -= WalkSpeed;
+    {
+      thing.Acceleration.x -= thing.MaxVelocity * 4.0f;
+    }
     else if (thing.InputRight)
-      m.x += WalkSpeed;
-
-    thing.Velocity += m;
+    {
+      thing.Acceleration.x += thing.MaxVelocity * 4.0f;
+    }
 
   }
 }

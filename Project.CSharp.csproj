@@ -89,6 +89,7 @@
     <Compile Include="Assets\Source\Powerups\Player.cs" />
     <Compile Include="Assets\Source\Powerups\PowerUp.cs" />
     <Compile Include="Assets\Source\Powerups\Walk.cs" />
+    <Compile Include="Assets\Source\SimpleAnimator.cs" />
     <Compile Include="Assets\Source\Thing.cs" />
     <Compile Include="Assets\Source\Tile.cs" />
   </ItemGroup>

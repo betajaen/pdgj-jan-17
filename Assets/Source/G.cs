@@ -8,6 +8,7 @@ class G : MonoBehaviour
 {
   public static G g;
   public static Bounds LevelBounds = new Bounds();
+  public static float Gravity = -25.0f;
 
   public GameObject Prefab_Bullet;
   public GameObject Prefab_Snail;

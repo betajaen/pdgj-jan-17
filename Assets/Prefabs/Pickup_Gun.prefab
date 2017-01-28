@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4007722461556516}
   - component: {fileID: 114895493982437678}
-  - component: {fileID: 114956807359220386}
   - component: {fileID: 212924669804921944}
   - component: {fileID: 61092410424133188}
   - component: {fileID: 50351110263966168}
   - component: {fileID: 114980743188711724}
   - component: {fileID: 114980427656452920}
+  - component: {fileID: 114073539885267486}
   m_Layer: 10
   m_Name: Pickup_Gun
   m_TagString: Pickup
@@ -80,6 +80,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1.4, y: 1.4}
+--- !u!114 &114073539885267486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1940779401486420}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f7baa28511add48b091532f956f648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thing: {fileID: 0}
+  maxTime: 0.25
 --- !u!114 &114895493982437678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,20 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 0}
-  Pickup: {fileID: 114956807359220386}
---- !u!114 &114956807359220386
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1940779401486420}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8cd428edb4bac84390eb282914f1cd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thing: {fileID: 0}
-  WalkSpeed: 200
+  Pickup: {fileID: 114073539885267486}
 --- !u!114 &114980427656452920
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f9ccae8237a345ba5a8dbd4fa8956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkAnimation: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   Animator: {fileID: 0}
+  SimpleAnimator: {fileID: 0}
   CC: {fileID: 0}
   LeftFacing: 0
   M: 0
@@ -178,7 +178,10 @@ MonoBehaviour:
   InputUp: 0
   InputDown: 0
   InputFire: 0
+  MaxVelocity: 12
+  Acceleration: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
+  Drag: {x: 60, y: 0, z: 0}
   IsPlayer: 0
   CanShoot: 0
   NoGravity: 0
@@ -187,7 +190,8 @@ MonoBehaviour:
   ShootPlayer: 0
   DirectionLeft: 0
   AirTimer: 0
-  InAir: 0
+  State: 0
+  Animations: []
 --- !u!212 &212924669804921944
 SpriteRenderer:
   m_ObjectHideFlags: 1

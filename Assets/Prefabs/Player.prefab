@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 61678227394744428}
   - component: {fileID: 50201997137421540}
   - component: {fileID: 114210174631345344}
+  - component: {fileID: 114658750555079752}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_GameObject: {fileID: 1708040727070418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.229, y: 12.267, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 114396730186324204}
-  WalkSpeed: 10
+  Acceleration: 0
 --- !u!114 &114210174631345344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -166,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f9ccae8237a345ba5a8dbd4fa8956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkAnimation: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   Animator: {fileID: 0}
+  SimpleAnimator: {fileID: 0}
   CC: {fileID: 114210174631345344}
   LeftFacing: 0
   M: 0
@@ -177,7 +178,10 @@ MonoBehaviour:
   InputUp: 0
   InputDown: 0
   InputFire: 0
+  MaxVelocity: 12
+  Acceleration: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
+  Drag: {x: 60, y: 0, z: 0}
   IsPlayer: 1
   CanShoot: 0
   NoGravity: 0
@@ -186,7 +190,60 @@ MonoBehaviour:
   ShootPlayer: 0
   DirectionLeft: 0
   AirTimer: 0
-  InAir: 0
+  State: 0
+  Animations:
+  - PlayerIdle
+  - PlayerWalk
+  - PlayerFall
+  - PlayerFall
+--- !u!114 &114658750555079752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1708040727070418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 651219a01a8a822448874a5200e50793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - name: Idle
+    frames:
+    - {fileID: 21300000, guid: c60579e9d17fe4d4c85c9b754b245a76, type: 3}
+    framesPerSec: 1
+    speed: 1
+    loop: 1
+  - name: Walk
+    frames:
+    - {fileID: 21300000, guid: 32f1eefd4965bad43bdd3d658c7530af, type: 3}
+    - {fileID: 21300000, guid: 4b6f178237256764ab8dae2b9c415559, type: 3}
+    - {fileID: 21300000, guid: 83ca833d1a3c1a04c975e599ee23df96, type: 3}
+    - {fileID: 21300000, guid: 13977353c9c07484bb5cd817bccf9dba, type: 3}
+    - {fileID: 21300000, guid: 4e75cd75e87da2f4a896d974239f7e99, type: 3}
+    - {fileID: 21300000, guid: 5e48d350c1fe8de4faeb11d9638f0724, type: 3}
+    - {fileID: 21300000, guid: 4380cea0eca29ec4a8491e096b4a3ee5, type: 3}
+    - {fileID: 21300000, guid: 95b8d9a6db4943d43aba48282520e053, type: 3}
+    - {fileID: 21300000, guid: 3b8544e086497434b90442ca56e9d5a1, type: 3}
+    - {fileID: 21300000, guid: 1081adbc01808014684d8c0be1b5d352, type: 3}
+    - {fileID: 21300000, guid: 0da23ddaf0853ee4d8feee24680d6f9a, type: 3}
+    framesPerSec: 11
+    speed: 1
+    loop: 1
+  - name: Fall
+    frames:
+    - {fileID: 21300000, guid: 4f3406e54fa000a48b2b86d918d5f14e, type: 3}
+    framesPerSec: 1
+    speed: 1
+    loop: 1
+  - name: Jump
+    frames:
+    - {fileID: 21300000, guid: 4f3406e54fa000a48b2b86d918d5f14e, type: 3}
+    framesPerSec: 1
+    speed: 1
+    loop: 1
+  currentFrame: 0
+  speed: 8
 --- !u!212 &212556120405640812
 SpriteRenderer:
   m_ObjectHideFlags: 1

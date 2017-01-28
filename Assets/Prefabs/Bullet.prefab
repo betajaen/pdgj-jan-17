@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 114396730186324204}
-  WalkSpeed: 5.54
+  Acceleration: 0
 --- !u!114 &114210174631345344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkAnimation: {fileID: 0}
+  FallAnimation: {fileID: 0}
+  JumpAnimation: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   Animator: {fileID: 0}
   CC: {fileID: 114210174631345344}
@@ -180,7 +182,10 @@ MonoBehaviour:
   InputUp: 0
   InputDown: 0
   InputFire: 0
+  MaxVelocity: 12
+  Acceleration: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
+  Drag: {x: 60, y: 0, z: 0}
   IsPlayer: 0
   CanShoot: 0
   NoGravity: 1
@@ -189,7 +194,7 @@ MonoBehaviour:
   ShootPlayer: 0
   DirectionLeft: 0
   AirTimer: 0
-  InAir: 0
+  State: 0
 --- !u!212 &212556120405640812
 SpriteRenderer:
   m_ObjectHideFlags: 1
