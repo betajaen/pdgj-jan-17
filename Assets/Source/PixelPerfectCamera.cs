@@ -4,22 +4,22 @@ using System.Collections;
 [RequireComponent(typeof(Camera))]
 public class PixelPerfectCamera : MonoBehaviour
 {
-  public float PixelsToUnits = 100.0f;
-  public float Zoom = 1.0f;
-
-  private Camera cam;
-  private float invPixelToUnits;
-
-  void Start()
+  void LateUpdate()
   {
-    invPixelToUnits = 1.0f / PixelsToUnits;
-    cam = GetComponent<Camera>();
-    cam.orthographicSize = Screen.height * 0.5f * invPixelToUnits / Zoom;
-  }
-
-  void Update()
-  {
-    cam.orthographicSize = Screen.height * 0.5f * invPixelToUnits / Zoom;
+    float screenRatio = (float)Screen.width / (float)Screen.height;
+    float targetRatio = G.LevelBounds.size.x /G.LevelBounds.size.y;
+ 
+    if (screenRatio >= targetRatio)
+    {
+      Camera.main.orthographicSize = G.LevelBounds.size.y / 2;
+    }
+    else
+    {
+      float differenceInSize = targetRatio / screenRatio;
+      Camera.main.orthographicSize = G.LevelBounds.size.y / 2 * differenceInSize;
+    }
+ 
+    transform.position = new Vector3(G.LevelBounds.center.x, G.LevelBounds.center.y, -1f);
   }
 
 }

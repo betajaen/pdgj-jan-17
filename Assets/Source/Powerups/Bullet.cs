@@ -29,7 +29,7 @@ class Bullet : PowerUp
   
   public static void Shoot(bool shootLeft, bool shootPlayer, Vector3 position)
   {
-    GameObject bullet = GameObject.Instantiate(Level.Ptr.Bullet, position, Quaternion.identity);
+    GameObject bullet = GameObject.Instantiate(G.g.Prefab_Bullet, position, Quaternion.identity);
     Bullet b = bullet.gameObject.GetComponent<Bullet>();
     b.hitPlayer = shootPlayer;
     b.left = shootLeft;

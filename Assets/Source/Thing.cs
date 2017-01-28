@@ -85,8 +85,8 @@ public class Thing : MonoBehaviour
 
     if (IsPlayer)
     {
-         Scene scene = SceneManager.GetActiveScene(); 
-          SceneManager.LoadScene(scene.name);
+      Scene scene = SceneManager.GetActiveScene(); 
+      SceneManager.LoadScene(scene.name);
     }
   }
 
