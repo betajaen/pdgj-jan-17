@@ -20,6 +20,7 @@ class Hostile : PowerUp
 
   void Start()
   {
+    hide = true;
     Roll();
   }
 

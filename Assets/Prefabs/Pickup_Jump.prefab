@@ -41,7 +41,7 @@ Transform:
   m_GameObject: {fileID: 1940779401486420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 22.33, y: 11.84, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,7 +79,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1.4, y: 1.4}
+  m_Size: {x: 0.7, y: 0.7}
 --- !u!114 &114895493982437678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 0}
+  hide: 0
+  sprite: {fileID: 0}
   Pickup: {fileID: 114956807359220386}
 --- !u!114 &114956807359220386
 MonoBehaviour:
@@ -105,6 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 0}
+  hide: 0
+  sprite: {fileID: 0}
   WalkSpeed: 200
 --- !u!114 &114980427656452920
 MonoBehaviour:
@@ -167,19 +171,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1f9ccae8237a345ba5a8dbd4fa8956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkAnimation: {fileID: 0}
-  FallAnimation: {fileID: 0}
-  JumpAnimation: {fileID: 0}
   SpriteRenderer: {fileID: 0}
   Animator: {fileID: 0}
+  SimpleAnimator: {fileID: 0}
   CC: {fileID: 0}
   LeftFacing: 0
   M: 0
   InputLeft: 0
   InputRight: 0
-  InputUp: 0
-  InputDown: 0
+  InputJump: 0
   InputFire: 0
+  InputPickup: 0
+  InputDrop: 0
+  InputNext: 0
   MaxVelocity: 12
   Acceleration: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
@@ -193,6 +197,8 @@ MonoBehaviour:
   DirectionLeft: 0
   AirTimer: 0
   State: 0
+  Animations: []
+  HoverPowerUp: {fileID: 0}
 --- !u!212 &212924669804921944
 SpriteRenderer:
   m_ObjectHideFlags: 1

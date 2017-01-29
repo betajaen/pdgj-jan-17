@@ -16,11 +16,14 @@ class G : MonoBehaviour
   public GameObject Prefab_PowerUp_Jump;
   public GameObject Prefab_PowerUp_Gun;
   
+  public Sprite HudSelectedSprite;
+
   public TextAsset     MapFile;
   public Texture2D[]   Art;
   public static Dictionary<string, Sprite>      Sprites;
   public static Dictionary<int,   Sprite>       SpritesByTmx;
   public static Sprite[]      SpritesAll;
+  
 
   void Awake()
   {
@@ -41,4 +44,12 @@ class G : MonoBehaviour
 
   }
 
+  public static Sprite PowerUpTypeToSprite(Type type)
+  {
+    if (type == typeof(Jump))
+      return g.Prefab_PowerUp_Jump.GetComponent<SpriteRenderer>().sprite;
+    else if (type == typeof(Gun))
+      return g.Prefab_PowerUp_Gun.GetComponent<SpriteRenderer>().sprite;
+    return SpritesAll[0];
+  }
 }

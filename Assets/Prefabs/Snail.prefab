@@ -206,10 +206,10 @@ MonoBehaviour:
   InputUp: 0
   InputDown: 0
   InputFire: 0
-  MaxVelocity: 12
+  MaxVelocity: 4
   Acceleration: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
-  Drag: {x: 60, y: 0, z: 0}
+  Drag: {x: 80, y: 0, z: 0}
   IsPlayer: 0
   CanShoot: 0
   NoGravity: 0

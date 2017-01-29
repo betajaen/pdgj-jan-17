@@ -7,7 +7,7 @@ class Collect : PowerUp
 {
   public PowerUp Pickup;
   
-  void Awake()
+  void Start()
   {
     gameObject.tag = "Pickup";
   }

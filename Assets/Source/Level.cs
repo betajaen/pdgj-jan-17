@@ -32,7 +32,7 @@ public class Level : MonoBehaviour
     }
   }
 
-  void SpawnObject(int x, int y, GameObject t)
+  void SpawnObject(float x, float y, GameObject t)
   {
     GameObject go = GameObject.Instantiate(t);
     go.transform.position = new Vector3(x, y);
@@ -58,7 +58,7 @@ public class Level : MonoBehaviour
       return;
     }
 
-    if (sprite.name == "PewPewPew")
+    if (sprite.name == "raygun")
     {
       SpawnObject(X, Y, G.g.Prefab_PowerUp_Gun);
       return;
@@ -89,7 +89,7 @@ public class Level : MonoBehaviour
     int _width = 0, _height = 0;
 
     G.LevelBounds = new Bounds();
-
+    G.LevelBounds.Encapsulate(new Vector3(0, 15.5f, 0));
     while (xmlReader.Read())
     {
       //scan map size
@@ -101,11 +101,31 @@ public class Level : MonoBehaviour
       //scan object layer
       if (xmlReader.IsStartElement("object"))
       {
-        int x = int.Parse(xmlReader.GetAttribute("x"));
-        int y = int.Parse(xmlReader.GetAttribute("y"));
-        int gid = int.Parse(xmlReader.GetAttribute("gid"));
+        float x = float.Parse(xmlReader.GetAttribute("x")) / 70.0f;
+        float y = _height - (float.Parse(xmlReader.GetAttribute("y")) / 70.0f);
+
         string name = xmlReader.GetAttribute("name");
-        //CreateTile(x, y, gid, name);
+        
+        Debug.Log(name);
+
+        if (name == "Gun")
+        {
+          SpawnObject(x, y, G.g.Prefab_PowerUp_Gun);
+        }
+        else if (name == "Jump")
+        {
+          SpawnObject(x, y, G.g.Prefab_PowerUp_Jump);
+        }
+        else if (name == "Player")
+        {
+          SpawnObject(x, y, G.g.Prefab_Player);
+        }
+        else if (name == "Snail")
+        {
+          SpawnObject(x, y, G.g.Prefab_Snail);
+        }
+
+        continue;
       }
       //scan object layer
       if (xmlReader.IsStartElement("tile"))
@@ -140,21 +160,18 @@ public class Level : MonoBehaviour
             int tile = 0;
             if (int.TryParse(cols[i], out tile))
             {
-
               if (tile == 0)
                 continue;
-
-
+              
               if (G.SpritesByTmx.ContainsKey(tile) == true)
               {
                 Add(i, _height - j, G.SpritesByTmx[tile - 1]);
               }
               else
               {
-                Debug.LogWarningFormat("{0} {1} is wrong {2}", i, j, tile);
+                Debug.LogWarningFormat("{0} {1} is wrong {2}", i, j, tile - 1);
               }
-
-              //CreateTile(i, _height - j, tile, "");
+              
             }
           }
         }

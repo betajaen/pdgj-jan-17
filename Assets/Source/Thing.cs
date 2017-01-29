@@ -26,7 +26,7 @@ public class Thing : MonoBehaviour
   public CharacterController2D      CC;
   public bool             LeftFacing;
   public Mode             M;
-  public bool             InputLeft, InputRight, InputUp, InputDown, InputFire;
+  public bool             InputLeft, InputRight, InputJump, InputFire, InputPickup, InputDrop, InputNext;
   public float            MaxVelocity = 4.0f;
   public Vector3          Acceleration, Velocity, Drag;
   public bool             IsPlayer;
@@ -39,7 +39,12 @@ public class Thing : MonoBehaviour
   public float            AirTimer;
   public int              State;
   public String[]         Animations;
+  public Dictionary<Type, PowerUp>    PowerUps = new Dictionary<Type, PowerUp>(4); 
+  public PowerUp          HoverPowerUp;
   
+	public event Action<PowerUp> OnPowerUp;
+  public event Action<PowerUp> OnPowerDown;
+
   void Start()
   {
     SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -51,6 +56,13 @@ public class Thing : MonoBehaviour
     SetState(kState_Idle);
     
     CC.onTriggerEnterEvent += onTriggerEvent;
+    CC.onTriggerStayEvent  += onTriggerStayEvent;
+
+    foreach(var powerUp in GetComponents<PowerUp>())
+    {
+      PowerUps.Add(powerUp.GetType(), powerUp);
+    }
+
   }
 
   bool SetState(int s)
@@ -77,21 +89,45 @@ public class Thing : MonoBehaviour
     return State;
   }
   
+  public bool AddPowerUp(Type type)
+  {
+    if (PowerUps.ContainsKey(type))
+      return false;
+
+    Component t = gameObject.AddComponent(type);
+    PowerUps.Add(type, t as PowerUp);
+    if (OnPowerUp != null)
+    { 
+      OnPowerUp(t as PowerUp);
+    }
+    return true;
+  }
+
+  public void RemovePowerUp(Type type)
+  {
+    if (PowerUps.ContainsKey(type))
+    {
+      PowerUp p = PowerUps[type];
+
+      if (OnPowerDown != null)
+      {
+        OnPowerDown(p);
+      }
+      
+      PowerUps.Remove(type);
+      Destroy(p);
+    }
+  }
+
   private void onTriggerEvent(Collider2D obj)
   {
     if (IsPlayer && obj.name.StartsWith("Pickup"))
     {
       Collect collect = obj.GetComponent<Collect>();
-      Type pickupType = collect.Pickup.GetType();
-      Debug.Log(pickupType);
-
-      if (gameObject.GetComponent(pickupType) == null)
-      {
-        gameObject.AddComponent(pickupType);
-        GameObject.Destroy(collect.gameObject);
-      }
+      HoverPowerUp = collect.Pickup;
     }
-    else if (IsPlayer && obj.name.StartsWith("Hostile"))
+
+    if (IsPlayer && obj.name.StartsWith("Hostile"))
     {
       Death();
     }
@@ -106,9 +142,26 @@ public class Thing : MonoBehaviour
     }
   }
 
+  private void onTriggerStayEvent(Collider2D obj)
+  {
+    if (IsPlayer && obj.name.StartsWith("Pickup"))
+    {
+      Collect collect = obj.GetComponent<Collect>();
+      HoverPowerUp = collect.Pickup;
+    }
+  }
+
+  private void onTriggerLeaveEvent(Collider2D obj)
+  {
+    if (IsPlayer && obj.name.StartsWith("Pickup"))
+    {
+      HoverPowerUp = null;
+    }
+  }
+
   void Death()
   {
-      GameObject.Destroy(gameObject);
+    GameObject.Destroy(gameObject);
 
     if (IsPlayer)
     {
@@ -124,6 +177,15 @@ public class Thing : MonoBehaviour
 
   void Update()
   {
+    if (IsPlayer && InputPickup && HoverPowerUp != null)
+    {
+      if (AddPowerUp(HoverPowerUp.GetType()))
+      {
+        GameObject.Destroy(HoverPowerUp.gameObject);
+        HoverPowerUp = null;
+      }
+    }
+
     if (CC)
     { 
       

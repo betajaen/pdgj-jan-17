@@ -7,6 +7,11 @@ public class Walk : PowerUp
   
   public float Acceleration = 0.0f;
 
+  void Start()
+  {
+    hide = true;
+  }
+
   void Update()
   {
     Vector3 m = new Vector3(0, 0);

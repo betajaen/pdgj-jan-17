@@ -85,6 +85,11 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 
+    public Vector3 middleFeet
+    {
+      get { return (_raycastOrigins.bottomRight + _raycastOrigins.bottomLeft) * 0.5f; }
+    }
+
 	/// <summary>
 	/// mask with all layers that the player should interact with
 	/// </summary>

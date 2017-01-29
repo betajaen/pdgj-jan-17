@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="70" tileheight="70" nextobjectid="1">
- <tileset firstgid="1" name="Tiles" tilewidth="128" tileheight="141" tilecount="161" columns="0">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="70" tileheight="70" nextobjectid="14">
+ <tileset firstgid="1" name="Tiles" tilewidth="128" tileheight="128" tilecount="161" columns="0">
   <tile id="173">
    <image width="70" height="70" source="Tiles/box.png"/>
   </tile>
@@ -478,11 +478,11 @@
   <tile id="331">
    <image width="128" height="128" source="Things/spring.png"/>
   </tile>
-  <tile id="332">
-   <image width="34" height="20" source="Things/PewPewPew.png"/>
+  <tile id="334">
+   <image width="70" height="70" source="Things/raygun.png"/>
   </tile>
-  <tile id="333">
-   <image width="110" height="141" source="Things/springMan_hurt.png"/>
+  <tile id="336">
+   <image width="34" height="20" source="Things/PewPewPew.png"/>
   </tile>
  </tileset>
  <layer name="1F" width="20" height="15">
@@ -491,8 +491,8 @@
 292,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
 193,0,0,0,0,0,0,331,0,0,0,0,0,0,0,0,0,0,0,193,
 193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
-193,0,0,0,0,192,192,192,192,192,0,0,0,0,0,0,0,0,0,193,
-193,0,0,0,0,0,0,0,0,0,0,0,332,0,0,0,0,333,330,193,
+193,0,0,0,0,208,208,208,208,208,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
 193,0,0,0,0,0,0,0,0,0,0,0,207,209,0,0,208,208,208,193,
 193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,193,193,193,
 193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
@@ -500,8 +500,19 @@
 193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
 193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
 193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,208,193,
-193,0,0,0,0,0,0,0,0,0,0,330,0,0,0,0,330,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
 193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193
 </data>
  </layer>
+ <objectgroup name="1O">
+  <object id="2" name="Gun" gid="335" x="1188" y="349.333" width="70" height="70"/>
+  <object id="3" name="Jump" gid="332" x="856" y="306" width="128" height="128"/>
+  <object id="7" name="Snail" gid="2147483978" x="718.333" y="625.667" width="54" height="31"/>
+  <object id="8" name="Snail" gid="330" x="866.333" y="733.667" width="54" height="31"/>
+  <object id="9" name="Snail" gid="330" x="458.333" y="856.333" width="54" height="31"/>
+  <object id="10" name="Snail" gid="330" x="165" y="829.667" width="54" height="31"/>
+  <object id="11" name="Snail" gid="330" x="914.333" y="896.333" width="54" height="31"/>
+  <object id="12" name="Snail" gid="330" x="249" y="587" width="54" height="31"/>
+  <object id="13" name="Snail" gid="330" x="1258.33" y="800.333" width="54" height="31"/>
+ </objectgroup>
 </map>

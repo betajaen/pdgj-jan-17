@@ -256,6 +256,7 @@ MonoBehaviour:
     type: 2}
   Prefab_PowerUp_Gun: {fileID: 1940779401486420, guid: d7a3337451d98e349b6671fb28859262,
     type: 2}
+  HudSelectedSprite: {fileID: 21300000, guid: e886eb5f5dece55448c77cdebc70b843, type: 3}
   MapFile: {fileID: 4900000, guid: 1444ce20a62a299449d5ed0ae17da8af, type: 3}
   Art:
   - {fileID: 2800000, guid: 0e60d1a74227fe940942868942c2d638, type: 3}
@@ -437,3 +438,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: d0f53e7fe8935554f817c2a749a745b7, type: 3}
   - {fileID: 2800000, guid: ff77b6f2c7f7c7b4cabbe766e2ab1895, type: 3}
   - {fileID: 2800000, guid: 1f22600172e4e244196026dc9d89860a, type: 3}
+  - {fileID: 2800000, guid: f58de781a32f4da4aab8309e2acca089, type: 3}
+  - {fileID: 2800000, guid: ac3d85ba4ae60ef47a43f9b15fbcc60e, type: 3}
+  - {fileID: 2800000, guid: f1c8cc080812a9f479ee5081f2de897f, type: 3}
