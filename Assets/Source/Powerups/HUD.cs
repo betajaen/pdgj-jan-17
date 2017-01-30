@@ -105,7 +105,7 @@ public class HUD : PowerUp
       if (powerup.hide)
         continue;
 
-      PowerUpGlyph glyph = GetPowerUpGlyph(index, 15, powerup.GetType());
+      PowerUpGlyph glyph = GetPowerUpGlyph(index, 14.75f, powerup.GetType());
       glyph.PowerUp = kv.Value;
       
       if (selected == null)
@@ -115,7 +115,7 @@ public class HUD : PowerUp
 
       if (selected == powerup)
       {
-        selectedGlyph.Position = new Vector2(index, 15);
+        selectedGlyph.Position = new Vector2(index, 14.75f);
         selectedGlyph.Visible = true;
       }
       
@@ -125,7 +125,7 @@ public class HUD : PowerUp
     }
   }
 
-  PowerUpGlyph GetPowerUpGlyph(int x, int y, Type type)
+  PowerUpGlyph GetPowerUpGlyph(float x, float y, Type type)
   {
 
     Sprite theSprite = G.PowerUpTypeToSprite(type);

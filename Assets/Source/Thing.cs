@@ -131,6 +131,11 @@ public class Thing : MonoBehaviour
     {
       Death();
     }
+    else if (IsPlayer && obj.name.StartsWith("Exit"))
+    {
+      G.g.Level++;
+      Death();
+    }
     else if (obj.name.StartsWith("Bullet"))
     {
       Bullet bullet = obj.GetComponent<Bullet>();
@@ -232,6 +237,20 @@ public class Thing : MonoBehaviour
       }
 
     }
+
+    CheckBounds();
+
+  }
+
+  void CheckBounds()
+  {
+    Vector2 p = transform.position;
+
+    if (p.y < 0.0f || p.y > 18.0f || p.x > 20.0f || p.x < 0.0f)
+    {
+      Death();
+    }
+
   }
 
   static float GetVelocity(float v, float a, float d, float mv)

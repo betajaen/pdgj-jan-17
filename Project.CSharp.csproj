@@ -82,6 +82,7 @@
     <Compile Include="Assets\Source\PixelPerfectCamera.cs" />
     <Compile Include="Assets\Source\Powerups\Bullet.cs" />
     <Compile Include="Assets\Source\Powerups\Collect.cs" />
+    <Compile Include="Assets\Source\Powerups\Exit.cs" />
     <Compile Include="Assets\Source\Powerups\Gun.cs" />
     <Compile Include="Assets\Source\Powerups\HUD.cs" />
     <Compile Include="Assets\Source\Powerups\Hostile.cs" />

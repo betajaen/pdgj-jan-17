@@ -64,7 +64,7 @@ public class PowerUpGlyph : Glyph
 {
   public PowerUp PowerUp;
 
-  public static PowerUpGlyph CreatePowerUpGlyph(int X, int Y, Sprite sprite)
+  public static PowerUpGlyph CreatePowerUpGlyph(float X, float Y, Sprite sprite)
   {
     GameObject go = new GameObject();
     go.layer = LayerMask.NameToLayer("HUD");

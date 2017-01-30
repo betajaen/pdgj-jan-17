@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4931298197106918}
-  - component: {fileID: 212556120405640812}
   - component: {fileID: 114131100884312186}
   - component: {fileID: 114396730186324204}
   - component: {fileID: 61678227394744428}
@@ -28,6 +27,7 @@ GameObject:
   - component: {fileID: 114942625468026620}
   - component: {fileID: 114113524449551310}
   - component: {fileID: 114928669443647906}
+  - component: {fileID: 212987695542809272}
   m_Layer: 8
   m_Name: Snail
   m_TagString: Untagged
@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 114396730186324204}
+  hide: 0
+  sprite: {fileID: 0}
   Acceleration: 0
 --- !u!114 &114210174631345344
 MonoBehaviour:
@@ -203,9 +205,11 @@ MonoBehaviour:
   M: 0
   InputLeft: 0
   InputRight: 0
-  InputUp: 0
-  InputDown: 0
+  InputJump: 0
   InputFire: 0
+  InputPickup: 0
+  InputDrop: 0
+  InputNext: 0
   MaxVelocity: 4
   Acceleration: {x: 0, y: 0, z: 0}
   Velocity: {x: 0, y: 0, z: 0}
@@ -220,6 +224,7 @@ MonoBehaviour:
   AirTimer: 0
   State: 0
   Animations: []
+  HoverPowerUp: {fileID: 0}
 --- !u!114 &114928669443647906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 0}
+  hide: 0
+  sprite: {fileID: 0}
   maxTime: 0.25
 --- !u!114 &114942625468026620
 MonoBehaviour:
@@ -245,6 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thing: {fileID: 0}
+  hide: 0
+  sprite: {fileID: 0}
   d: {x: 0, y: 0}
   p: {x: 0, y: 0}
   maxDistance: 4
@@ -254,7 +263,7 @@ MonoBehaviour:
   left: 0
   right: 0
   shootTimer: 0
---- !u!212 &212556120405640812
+--- !u!212 &212987695542809272
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

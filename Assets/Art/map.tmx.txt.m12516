@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="70" tileheight="70" nextobjectid="99">
+ <tileset firstgid="1" name="Tiles" tilewidth="70" tileheight="70" tilecount="156" columns="0">
+  <tile id="173">
+   <image width="70" height="70" source="Tiles/box.png"/>
+  </tile>
+  <tile id="174">
+   <image width="70" height="70" source="Tiles/boxAlt.png"/>
+  </tile>
+  <tile id="175">
+   <image width="70" height="70" source="Tiles/boxCoin.png"/>
+  </tile>
+  <tile id="176">
+   <image width="70" height="70" source="Tiles/boxCoin_disabled.png"/>
+  </tile>
+  <tile id="177">
+   <image width="70" height="70" source="Tiles/boxCoinAlt.png"/>
+  </tile>
+  <tile id="178">
+   <image width="70" height="70" source="Tiles/boxCoinAlt_disabled.png"/>
+  </tile>
+  <tile id="179">
+   <image width="70" height="70" source="Tiles/boxEmpty.png"/>
+  </tile>
+  <tile id="180">
+   <image width="70" height="70" source="Tiles/boxExplosive.png"/>
+  </tile>
+  <tile id="181">
+   <image width="70" height="70" source="Tiles/boxExplosive_disabled.png"/>
+  </tile>
+  <tile id="182">
+   <image width="70" height="70" source="Tiles/boxExplosiveAlt.png"/>
+  </tile>
+  <tile id="183">
+   <image width="70" height="70" source="Tiles/boxItem.png"/>
+  </tile>
+  <tile id="184">
+   <image width="70" height="70" source="Tiles/boxItem_disabled.png"/>
+  </tile>
+  <tile id="185">
+   <image width="70" height="70" source="Tiles/boxItemAlt.png"/>
+  </tile>
+  <tile id="186">
+   <image width="70" height="70" source="Tiles/boxItemAlt_disabled.png"/>
+  </tile>
+  <tile id="187">
+   <image width="70" height="70" source="Tiles/boxWarning.png"/>
+  </tile>
+  <tile id="188">
+   <image width="70" height="70" source="Tiles/brickWall.png"/>
+  </tile>
+  <tile id="189">
+   <image width="70" height="70" source="Tiles/bridge.png"/>
+  </tile>
+  <tile id="190">
+   <image width="70" height="70" source="Tiles/bridgeLogs.png"/>
+  </tile>
+  <tile id="191">
+   <image width="70" height="70" source="Tiles/castle.png"/>
+  </tile>
+  <tile id="192">
+   <image width="70" height="70" source="Tiles/castleCenter.png"/>
+  </tile>
+  <tile id="193">
+   <image width="70" height="70" source="Tiles/castleCenter_rounded.png"/>
+  </tile>
+  <tile id="194">
+   <image width="70" height="70" source="Tiles/castleCliffLeft.png"/>
+  </tile>
+  <tile id="195">
+   <image width="70" height="70" source="Tiles/castleCliffLeftAlt.png"/>
+  </tile>
+  <tile id="196">
+   <image width="70" height="70" source="Tiles/castleCliffRight.png"/>
+  </tile>
+  <tile id="197">
+   <image width="70" height="70" source="Tiles/castleCliffRightAlt.png"/>
+  </tile>
+  <tile id="198">
+   <image width="70" height="70" source="Tiles/castleHalf.png"/>
+  </tile>
+  <tile id="199">
+   <image width="70" height="70" source="Tiles/castleHalfLeft.png"/>
+  </tile>
+  <tile id="200">
+   <image width="70" height="70" source="Tiles/castleHalfMid.png"/>
+  </tile>
+  <tile id="201">
+   <image width="70" height="70" source="Tiles/castleHalfRight.png"/>
+  </tile>
+  <tile id="202">
+   <image width="70" height="70" source="Tiles/castleHillLeft.png"/>
+  </tile>
+  <tile id="203">
+   <image width="70" height="70" source="Tiles/castleHillLeft2.png"/>
+  </tile>
+  <tile id="204">
+   <image width="70" height="70" source="Tiles/castleHillRight.png"/>
+  </tile>
+  <tile id="205">
+   <image width="70" height="70" source="Tiles/castleHillRight2.png"/>
+  </tile>
+  <tile id="206">
+   <image width="70" height="70" source="Tiles/castleLeft.png"/>
+  </tile>
+  <tile id="207">
+   <image width="70" height="70" source="Tiles/castleMid.png"/>
+  </tile>
+  <tile id="208">
+   <image width="70" height="70" source="Tiles/castleRight.png"/>
+  </tile>
+  <tile id="209">
+   <image width="70" height="70" source="Tiles/dirt.png"/>
+  </tile>
+  <tile id="210">
+   <image width="70" height="70" source="Tiles/dirtCenter.png"/>
+  </tile>
+  <tile id="211">
+   <image width="70" height="70" source="Tiles/dirtCenter_rounded.png"/>
+  </tile>
+  <tile id="212">
+   <image width="70" height="70" source="Tiles/dirtCliffLeft.png"/>
+  </tile>
+  <tile id="213">
+   <image width="70" height="70" source="Tiles/dirtCliffLeftAlt.png"/>
+  </tile>
+  <tile id="214">
+   <image width="70" height="70" source="Tiles/dirtCliffRight.png"/>
+  </tile>
+  <tile id="215">
+   <image width="70" height="70" source="Tiles/dirtCliffRightAlt.png"/>
+  </tile>
+  <tile id="216">
+   <image width="70" height="70" source="Tiles/dirtHalf.png"/>
+  </tile>
+  <tile id="217">
+   <image width="70" height="70" source="Tiles/dirtHalfLeft.png"/>
+  </tile>
+  <tile id="218">
+   <image width="70" height="70" source="Tiles/dirtHalfMid.png"/>
+  </tile>
+  <tile id="219">
+   <image width="70" height="70" source="Tiles/dirtHalfRight.png"/>
+  </tile>
+  <tile id="220">
+   <image width="70" height="70" source="Tiles/dirtHillLeft.png"/>
+  </tile>
+  <tile id="221">
+   <image width="70" height="70" source="Tiles/dirtHillLeft2.png"/>
+  </tile>
+  <tile id="222">
+   <image width="70" height="70" source="Tiles/dirtHillRight.png"/>
+  </tile>
+  <tile id="223">
+   <image width="70" height="70" source="Tiles/dirtHillRight2.png"/>
+  </tile>
+  <tile id="224">
+   <image width="70" height="70" source="Tiles/dirtLeft.png"/>
+  </tile>
+  <tile id="225">
+   <image width="70" height="70" source="Tiles/dirtMid.png"/>
+  </tile>
+  <tile id="226">
+   <image width="70" height="70" source="Tiles/dirtRight.png"/>
+  </tile>
+  <tile id="227">
+   <image width="70" height="70" source="Tiles/door_closedMid.png"/>
+  </tile>
+  <tile id="228">
+   <image width="70" height="70" source="Tiles/door_closedTop.png"/>
+  </tile>
+  <tile id="229">
+   <image width="70" height="70" source="Tiles/door_openMid.png"/>
+  </tile>
+  <tile id="230">
+   <image width="70" height="70" source="Tiles/door_openTop.png"/>
+  </tile>
+  <tile id="231">
+   <image width="70" height="70" source="Tiles/fence.png"/>
+  </tile>
+  <tile id="232">
+   <image width="70" height="70" source="Tiles/fenceBroken.png"/>
+  </tile>
+  <tile id="233">
+   <image width="70" height="70" source="Tiles/grass.png"/>
+  </tile>
+  <tile id="234">
+   <image width="70" height="70" source="Tiles/grassCenter.png"/>
+  </tile>
+  <tile id="235">
+   <image width="70" height="70" source="Tiles/grassCenter_rounded.png"/>
+  </tile>
+  <tile id="236">
+   <image width="70" height="70" source="Tiles/grassCliffLeft.png"/>
+  </tile>
+  <tile id="237">
+   <image width="70" height="70" source="Tiles/grassCliffLeftAlt.png"/>
+  </tile>
+  <tile id="238">
+   <image width="70" height="70" source="Tiles/grassCliffRight.png"/>
+  </tile>
+  <tile id="239">
+   <image width="70" height="70" source="Tiles/grassCliffRightAlt.png"/>
+  </tile>
+  <tile id="240">
+   <image width="70" height="70" source="Tiles/grassHalf.png"/>
+  </tile>
+  <tile id="241">
+   <image width="70" height="70" source="Tiles/grassHalfLeft.png"/>
+  </tile>
+  <tile id="242">
+   <image width="70" height="70" source="Tiles/grassHalfMid.png"/>
+  </tile>
+  <tile id="243">
+   <image width="70" height="70" source="Tiles/grassHalfRight.png"/>
+  </tile>
+  <tile id="244">
+   <image width="70" height="70" source="Tiles/grassHillLeft.png"/>
+  </tile>
+  <tile id="245">
+   <image width="70" height="70" source="Tiles/grassHillLeft2.png"/>
+  </tile>
+  <tile id="246">
+   <image width="70" height="70" source="Tiles/grassHillRight.png"/>
+  </tile>
+  <tile id="247">
+   <image width="70" height="70" source="Tiles/grassHillRight2.png"/>
+  </tile>
+  <tile id="248">
+   <image width="70" height="70" source="Tiles/grassLeft.png"/>
+  </tile>
+  <tile id="249">
+   <image width="70" height="70" source="Tiles/grassMid.png"/>
+  </tile>
+  <tile id="250">
+   <image width="70" height="70" source="Tiles/grassRight.png"/>
+  </tile>
+  <tile id="251">
+   <image width="70" height="70" source="Tiles/ladder_mid.png"/>
+  </tile>
+  <tile id="252">
+   <image width="70" height="70" source="Tiles/ladder_top.png"/>
+  </tile>
+  <tile id="253">
+   <image width="70" height="70" source="Tiles/liquidLava.png"/>
+  </tile>
+  <tile id="254">
+   <image width="70" height="70" source="Tiles/liquidLavaTop.png"/>
+  </tile>
+  <tile id="255">
+   <image width="70" height="70" source="Tiles/liquidLavaTop_mid.png"/>
+  </tile>
+  <tile id="256">
+   <image width="70" height="70" source="Tiles/liquidWater.png"/>
+  </tile>
+  <tile id="257">
+   <image width="70" height="70" source="Tiles/liquidWaterTop.png"/>
+  </tile>
+  <tile id="258">
+   <image width="70" height="70" source="Tiles/liquidWaterTop_mid.png"/>
+  </tile>
+  <tile id="259">
+   <image width="70" height="70" source="Tiles/lock_blue.png"/>
+  </tile>
+  <tile id="260">
+   <image width="70" height="70" source="Tiles/lock_green.png"/>
+  </tile>
+  <tile id="261">
+   <image width="70" height="70" source="Tiles/lock_red.png"/>
+  </tile>
+  <tile id="262">
+   <image width="70" height="70" source="Tiles/lock_yellow.png"/>
+  </tile>
+  <tile id="263">
+   <image width="70" height="70" source="Tiles/rockHillLeft.png"/>
+  </tile>
+  <tile id="264">
+   <image width="70" height="70" source="Tiles/rockHillRight.png"/>
+  </tile>
+  <tile id="265">
+   <image width="70" height="70" source="Tiles/ropeAttached.png"/>
+  </tile>
+  <tile id="266">
+   <image width="70" height="70" source="Tiles/ropeHorizontal.png"/>
+  </tile>
+  <tile id="267">
+   <image width="70" height="70" source="Tiles/ropeVertical.png"/>
+  </tile>
+  <tile id="268">
+   <image width="70" height="70" source="Tiles/sand.png"/>
+  </tile>
+  <tile id="269">
+   <image width="70" height="70" source="Tiles/sandCenter.png"/>
+  </tile>
+  <tile id="270">
+   <image width="70" height="70" source="Tiles/sandCenter_rounded.png"/>
+  </tile>
+  <tile id="271">
+   <image width="70" height="70" source="Tiles/sandCliffLeft.png"/>
+  </tile>
+  <tile id="272">
+   <image width="70" height="70" source="Tiles/sandCliffLeftAlt.png"/>
+  </tile>
+  <tile id="273">
+   <image width="70" height="70" source="Tiles/sandCliffRight.png"/>
+  </tile>
+  <tile id="274">
+   <image width="70" height="70" source="Tiles/sandCliffRightAlt.png"/>
+  </tile>
+  <tile id="275">
+   <image width="70" height="70" source="Tiles/sandHalf.png"/>
+  </tile>
+  <tile id="276">
+   <image width="70" height="70" source="Tiles/sandHalfLeft.png"/>
+  </tile>
+  <tile id="277">
+   <image width="70" height="70" source="Tiles/sandHalfMid.png"/>
+  </tile>
+  <tile id="278">
+   <image width="70" height="70" source="Tiles/sandHalfRight.png"/>
+  </tile>
+  <tile id="279">
+   <image width="70" height="70" source="Tiles/sandHillLeft.png"/>
+  </tile>
+  <tile id="280">
+   <image width="70" height="70" source="Tiles/sandHillLeft2.png"/>
+  </tile>
+  <tile id="281">
+   <image width="70" height="70" source="Tiles/sandHillRight.png"/>
+  </tile>
+  <tile id="282">
+   <image width="70" height="70" source="Tiles/sandHillRight2.png"/>
+  </tile>
+  <tile id="283">
+   <image width="70" height="70" source="Tiles/sandLeft.png"/>
+  </tile>
+  <tile id="284">
+   <image width="70" height="70" source="Tiles/sandMid.png"/>
+  </tile>
+  <tile id="285">
+   <image width="70" height="70" source="Tiles/sandRight.png"/>
+  </tile>
+  <tile id="286">
+   <image width="70" height="70" source="Tiles/sign.png"/>
+  </tile>
+  <tile id="287">
+   <image width="70" height="70" source="Tiles/signExit.png"/>
+  </tile>
+  <tile id="288">
+   <image width="70" height="70" source="Tiles/signLeft.png"/>
+  </tile>
+  <tile id="289">
+   <image width="70" height="70" source="Tiles/signRight.png"/>
+  </tile>
+  <tile id="290">
+   <image width="70" height="70" source="Tiles/snow.png"/>
+  </tile>
+  <tile id="291">
+   <image width="70" height="70" source="Tiles/snowCenter.png"/>
+  </tile>
+  <tile id="292">
+   <image width="70" height="70" source="Tiles/snowCenter_rounded.png"/>
+  </tile>
+  <tile id="293">
+   <image width="70" height="70" source="Tiles/snowCliffLeft.png"/>
+  </tile>
+  <tile id="294">
+   <image width="70" height="70" source="Tiles/snowCliffLeftAlt.png"/>
+  </tile>
+  <tile id="295">
+   <image width="70" height="70" source="Tiles/snowCliffRight.png"/>
+  </tile>
+  <tile id="296">
+   <image width="70" height="70" source="Tiles/snowCliffRightAlt.png"/>
+  </tile>
+  <tile id="297">
+   <image width="70" height="70" source="Tiles/snowHalf.png"/>
+  </tile>
+  <tile id="298">
+   <image width="70" height="70" source="Tiles/snowHalfLeft.png"/>
+  </tile>
+  <tile id="299">
+   <image width="70" height="70" source="Tiles/snowHalfMid.png"/>
+  </tile>
+  <tile id="300">
+   <image width="70" height="70" source="Tiles/snowHalfRight.png"/>
+  </tile>
+  <tile id="301">
+   <image width="70" height="70" source="Tiles/snowHillLeft.png"/>
+  </tile>
+  <tile id="302">
+   <image width="70" height="70" source="Tiles/snowHillLeft2.png"/>
+  </tile>
+  <tile id="303">
+   <image width="70" height="70" source="Tiles/snowHillRight.png"/>
+  </tile>
+  <tile id="304">
+   <image width="70" height="70" source="Tiles/snowHillRight2.png"/>
+  </tile>
+  <tile id="305">
+   <image width="70" height="70" source="Tiles/snowLeft.png"/>
+  </tile>
+  <tile id="306">
+   <image width="70" height="70" source="Tiles/snowMid.png"/>
+  </tile>
+  <tile id="307">
+   <image width="70" height="70" source="Tiles/snowRight.png"/>
+  </tile>
+  <tile id="308">
+   <image width="70" height="70" source="Tiles/stone.png"/>
+  </tile>
+  <tile id="309">
+   <image width="70" height="70" source="Tiles/stoneCenter.png"/>
+  </tile>
+  <tile id="310">
+   <image width="70" height="70" source="Tiles/stoneCenter_rounded.png"/>
+  </tile>
+  <tile id="311">
+   <image width="70" height="70" source="Tiles/stoneCliffLeft.png"/>
+  </tile>
+  <tile id="312">
+   <image width="70" height="70" source="Tiles/stoneCliffLeftAlt.png"/>
+  </tile>
+  <tile id="313">
+   <image width="70" height="70" source="Tiles/stoneCliffRight.png"/>
+  </tile>
+  <tile id="314">
+   <image width="70" height="70" source="Tiles/stoneCliffRightAlt.png"/>
+  </tile>
+  <tile id="315">
+   <image width="70" height="70" source="Tiles/stoneHalf.png"/>
+  </tile>
+  <tile id="316">
+   <image width="70" height="70" source="Tiles/stoneHalfLeft.png"/>
+  </tile>
+  <tile id="317">
+   <image width="70" height="70" source="Tiles/stoneHalfMid.png"/>
+  </tile>
+  <tile id="318">
+   <image width="70" height="70" source="Tiles/stoneHalfRight.png"/>
+  </tile>
+  <tile id="319">
+   <image width="70" height="70" source="Tiles/stoneHillLeft2.png"/>
+  </tile>
+  <tile id="320">
+   <image width="70" height="70" source="Tiles/stoneHillRight2.png"/>
+  </tile>
+  <tile id="321">
+   <image width="70" height="70" source="Tiles/stoneLeft.png"/>
+  </tile>
+  <tile id="322">
+   <image width="70" height="70" source="Tiles/stoneMid.png"/>
+  </tile>
+  <tile id="323">
+   <image width="70" height="70" source="Tiles/stoneRight.png"/>
+  </tile>
+  <tile id="324">
+   <image width="70" height="70" source="Tiles/stoneWall.png"/>
+  </tile>
+  <tile id="325">
+   <image width="70" height="70" source="Tiles/tochLit.png"/>
+  </tile>
+  <tile id="326">
+   <image width="70" height="70" source="Tiles/tochLit2.png"/>
+  </tile>
+  <tile id="327">
+   <image width="70" height="70" source="Tiles/torch.png"/>
+  </tile>
+  <tile id="328">
+   <image width="70" height="70" source="Tiles/window.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="330" name="Scene" tilewidth="2002" tileheight="500" tilecount="79" columns="0">
+  <tile id="0">
+   <image width="205" height="182" source="Scene/castle.png"/>
+  </tile>
+  <tile id="1">
+   <image width="204" height="182" source="Scene/castle_beige.png"/>
+  </tile>
+  <tile id="2">
+   <image width="204" height="182" source="Scene/castle_grey.png"/>
+  </tile>
+  <tile id="3">
+   <image width="295" height="138" source="Scene/castle_wall.png"/>
+  </tile>
+  <tile id="4">
+   <image width="190" height="127" source="Scene/cloud1.png"/>
+  </tile>
+  <tile id="5">
+   <image width="200" height="125" source="Scene/cloud2.png"/>
+  </tile>
+  <tile id="6">
+   <image width="177" height="121" source="Scene/cloud3.png"/>
+  </tile>
+  <tile id="7">
+   <image width="228" height="124" source="Scene/cloud4.png"/>
+  </tile>
+  <tile id="8">
+   <image width="238" height="135" source="Scene/cloud5.png"/>
+  </tile>
+  <tile id="9">
+   <image width="266" height="138" source="Scene/cloud6.png"/>
+  </tile>
+  <tile id="10">
+   <image width="234" height="118" source="Scene/cloud7.png"/>
+  </tile>
+  <tile id="11">
+   <image width="210" height="119" source="Scene/cloud8.png"/>
+  </tile>
+  <tile id="12">
+   <image width="213" height="119" source="Scene/cloud9.png"/>
+  </tile>
+  <tile id="13">
+   <image width="2002" height="206" source="Scene/clouds1.png"/>
+  </tile>
+  <tile id="14">
+   <image width="1000" height="246" source="Scene/clouds2.png"/>
+  </tile>
+  <tile id="15">
+   <image width="128" height="88" source="Scene/fence.png"/>
+  </tile>
+  <tile id="16">
+   <image width="110" height="86" source="Scene/fence_piece.png"/>
+  </tile>
+  <tile id="17">
+   <image width="26" height="29" source="Scene/grass1.png"/>
+  </tile>
+  <tile id="18">
+   <image width="26" height="29" source="Scene/grass2.png"/>
+  </tile>
+  <tile id="19">
+   <image width="38" height="35" source="Scene/grass3.png"/>
+  </tile>
+  <tile id="20">
+   <image width="38" height="35" source="Scene/grass4.png"/>
+  </tile>
+  <tile id="21">
+   <image width="26" height="29" source="Scene/grass5.png"/>
+  </tile>
+  <tile id="22">
+   <image width="38" height="35" source="Scene/grass6.png"/>
+  </tile>
+  <tile id="26">
+   <image width="102" height="115" source="Scene/house_beige_front.png"/>
+  </tile>
+  <tile id="27">
+   <image width="189" height="115" source="Scene/house_beige_side.png"/>
+  </tile>
+  <tile id="28">
+   <image width="102" height="115" source="Scene/house_front_short.png"/>
+  </tile>
+  <tile id="29">
+   <image width="102" height="174" source="Scene/house_front_tall.png"/>
+  </tile>
+  <tile id="30">
+   <image width="102" height="174" source="Scene/house_grey_front.png"/>
+  </tile>
+  <tile id="31">
+   <image width="174" height="174" source="Scene/house_grey_side.png"/>
+  </tile>
+  <tile id="32">
+   <image width="189" height="115" source="Scene/house_side_short.png"/>
+  </tile>
+  <tile id="33">
+   <image width="174" height="174" source="Scene/house_side_tall.png"/>
+  </tile>
+  <tile id="34">
+   <image width="85" height="85" source="Scene/moon_full.png"/>
+  </tile>
+  <tile id="35">
+   <image width="84" height="85" source="Scene/moon_half.png"/>
+  </tile>
+  <tile id="36">
+   <image width="286" height="306" source="Scene/mountain1.png"/>
+  </tile>
+  <tile id="37">
+   <image width="249" height="242" source="Scene/mountain2.png"/>
+  </tile>
+  <tile id="38">
+   <image width="245" height="397" source="Scene/mountain3.png"/>
+  </tile>
+  <tile id="39">
+   <image width="215" height="166" source="Scene/piramid.png"/>
+  </tile>
+  <tile id="42">
+   <image width="87" height="86" source="Scene/sun.png"/>
+  </tile>
+  <tile id="43">
+   <image width="223" height="131" source="Scene/temple.png"/>
+  </tile>
+  <tile id="44">
+   <image width="66" height="227" source="Scene/tower.png"/>
+  </tile>
+  <tile id="45">
+   <image width="66" height="227" source="Scene/tower_beige.png"/>
+  </tile>
+  <tile id="46">
+   <image width="66" height="227" source="Scene/tower_grey.png"/>
+  </tile>
+  <tile id="47">
+   <image width="128" height="230" source="Scene/tree01.png"/>
+  </tile>
+  <tile id="48">
+   <image width="136" height="293" source="Scene/tree02.png"/>
+  </tile>
+  <tile id="49">
+   <image width="136" height="293" source="Scene/tree03.png"/>
+  </tile>
+  <tile id="50">
+   <image width="136" height="293" source="Scene/tree04.png"/>
+  </tile>
+  <tile id="51">
+   <image width="129" height="230" source="Scene/tree05.png"/>
+  </tile>
+  <tile id="52">
+   <image width="128" height="230" source="Scene/tree06.png"/>
+  </tile>
+  <tile id="53">
+   <image width="128" height="230" source="Scene/tree07.png"/>
+  </tile>
+  <tile id="54">
+   <image width="48" height="105" source="Scene/tree08.png"/>
+  </tile>
+  <tile id="55">
+   <image width="48" height="105" source="Scene/tree09.png"/>
+  </tile>
+  <tile id="56">
+   <image width="106" height="241" source="Scene/tree10.png"/>
+  </tile>
+  <tile id="57">
+   <image width="106" height="241" source="Scene/tree11.png"/>
+  </tile>
+  <tile id="58">
+   <image width="106" height="241" source="Scene/tree12.png"/>
+  </tile>
+  <tile id="59">
+   <image width="48" height="105" source="Scene/tree13.png"/>
+  </tile>
+  <tile id="60">
+   <image width="48" height="105" source="Scene/tree14.png"/>
+  </tile>
+  <tile id="61">
+   <image width="48" height="105" source="Scene/tree15.png"/>
+  </tile>
+  <tile id="62">
+   <image width="70" height="144" source="Scene/tree16.png"/>
+  </tile>
+  <tile id="63">
+   <image width="53" height="144" source="Scene/tree17.png"/>
+  </tile>
+  <tile id="64">
+   <image width="70" height="144" source="Scene/tree18.png"/>
+  </tile>
+  <tile id="65">
+   <image width="53" height="144" source="Scene/tree19.png"/>
+  </tile>
+  <tile id="66">
+   <image width="97" height="260" source="Scene/tree20.png"/>
+  </tile>
+  <tile id="67">
+   <image width="97" height="260" source="Scene/tree21.png"/>
+  </tile>
+  <tile id="68">
+   <image width="97" height="260" source="Scene/tree22.png"/>
+  </tile>
+  <tile id="69">
+   <image width="59" height="285" source="Scene/tree23.png"/>
+  </tile>
+  <tile id="70">
+   <image width="59" height="285" source="Scene/tree24.png"/>
+  </tile>
+  <tile id="71">
+   <image width="59" height="245" source="Scene/tree25.png"/>
+  </tile>
+  <tile id="72">
+   <image width="59" height="245" source="Scene/tree26.png"/>
+  </tile>
+  <tile id="73">
+   <image width="59" height="259" source="Scene/tree27.png"/>
+  </tile>
+  <tile id="74">
+   <image width="59" height="259" source="Scene/tree28.png"/>
+  </tile>
+  <tile id="75">
+   <image width="143" height="305" source="Scene/tree29.png"/>
+  </tile>
+  <tile id="76">
+   <image width="143" height="305" source="Scene/tree30.png"/>
+  </tile>
+  <tile id="77">
+   <image width="141" height="252" source="Scene/tree31.png"/>
+  </tile>
+  <tile id="78">
+   <image width="141" height="252" source="Scene/tree32.png"/>
+  </tile>
+  <tile id="79">
+   <image width="141" height="252" source="Scene/tree33.png"/>
+  </tile>
+  <tile id="80">
+   <image width="129" height="230" source="Scene/tree34.png"/>
+  </tile>
+  <tile id="81">
+   <image width="128" height="230" source="Scene/tree35.png"/>
+  </tile>
+  <tile id="82">
+   <image width="2001" height="500" source="Scene/hills2g.png"/>
+  </tile>
+  <tile id="83">
+   <image width="2001" height="500" source="Scene/hills2g1.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="414" name="Things" tilewidth="70" tileheight="92" tilecount="4" columns="0">
+  <tile id="0">
+   <image width="66" height="92" source="Things/p2_front.png"/>
+  </tile>
+  <tile id="1">
+   <image width="70" height="70" source="Things/raygun.png"/>
+  </tile>
+  <tile id="2">
+   <image width="54" height="31" source="Things/snailWalk1.png"/>
+  </tile>
+  <tile id="3">
+   <image width="70" height="70" source="Things/spring.png"/>
+  </tile>
+ </tileset>
+ <layer name="1_F" width="20" height="15" visible="0">
+  <data encoding="csv">
+193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,
+292,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,208,208,208,208,208,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,207,209,0,0,208,208,208,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,193,193,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,208,193,
+193,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,193,
+193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193,193
+</data>
+ </layer>
+ <objectgroup name="1_O" visible="0"/>
+ <objectgroup name="0_Layer4">
+  <object id="91" gid="343" x="-205" y="555" width="2002" height="206"/>
+ </objectgroup>
+ <objectgroup name="0_Layer3">
+  <object id="95" gid="413" x="-404" y="975.333" width="2001" height="500"/>
+ </objectgroup>
+ <objectgroup name="0_Layer2">
+  <object id="89" gid="412" x="-242.667" y="1048.67" width="2001" height="500"/>
+ </objectgroup>
+ <objectgroup name="0_Layer1">
+  <object id="23" gid="332" x="1060.67" y="545.007" width="92.6667" height="82.6732"/>
+  <object id="29" gid="386" x="625.485" y="635.818" width="106" height="241"/>
+  <object id="30" gid="386" x="115" y="209.334" width="106" height="241"/>
+  <object id="31" gid="381" x="-9.3333" y="209.667" width="129" height="230"/>
+  <object id="32" gid="381" x="1277" y="642.667" width="129" height="230"/>
+  <object id="34" gid="335" x="865.333" y="170" width="200" height="125"/>
+  <object id="36" gid="337" x="468.667" y="200.667" width="228" height="124"/>
+  <object id="63" gid="372" x="235.667" y="100.333" width="87" height="86"/>
+  <object id="68" gid="290" x="767.667" y="631" width="70" height="70"/>
+  <object id="74" gid="288" x="1197" y="628.333" width="70" height="70"/>
+  <object id="81" gid="384" x="977.333" y="562.667" width="48" height="105"/>
+  <object id="82" gid="384" x="1125.33" y="578.667" width="48" height="105"/>
+  <object id="83" gid="384" x="1045.33" y="586.667" width="48" height="105"/>
+ </objectgroup>
+ <layer name="0_F" width="20" height="15">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,237,239,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+250,250,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+235,235,235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+235,235,235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+235,235,235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+235,235,235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+235,235,235,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+235,235,235,250,250,250,250,250,250,250,250,244,0,0,242,250,250,250,250,250,
+235,235,235,235,235,235,235,235,235,235,235,0,0,0,0,235,235,235,235,235,
+235,235,235,235,235,235,235,235,235,235,235,0,0,0,0,235,235,235,235,235,
+235,235,235,235,235,235,235,235,235,235,235,0,0,0,0,235,235,235,235,235,
+235,235,235,235,235,235,235,235,235,235,235,0,0,0,0,235,235,235,235,235,
+235,235,235,235,235,235,235,235,235,235,235,0,0,0,0,235,235,235,235,235
+</data>
+ </layer>
+ <objectgroup name="0_Objects">
+  <object id="45" name="Player" gid="414" x="400.333" y="552.667" width="66" height="92"/>
+  <object id="96" name="Jump" gid="417" x="237" y="603" width="70" height="70"/>
+  <object id="97" name="Exit" x="1189.33" y="492" width="140" height="140"/>
+ </objectgroup>
+</map>
